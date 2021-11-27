@@ -1,0 +1,38 @@
+@use '../../assets/scss/variables' as *; 
+@use '../../assets/scss/mixin' as *; 
+
+.btn-array {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+
+  p {
+    margin: 0 !important;
+
+    input[type="submit"] {
+      margin: 0;
+      height: auto;
+      width: auto;
+      padding: $spacing-vsmall $spacing-xlarge;
+      font-weight: $font-weight-medium;
+      text-align: center;
+      border: none;
+      border-radius: $border-radius-large;
+      color: $third-color; 
+      background: linear-gradient(70deg, #253586 0%, #2d70b2 50%, #28e4e9 100%);
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 6px 20px 0 rgb(0 0 0 / 60%);
+
+
+  
+      &:hover {
+        box-shadow: 0 6px 20px 5px rgb(0 0 0 / 60%);
+        background-color: $primary-color-highlight;
+      }
+  
+    }
+
+  }
+
+}

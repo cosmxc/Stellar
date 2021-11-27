@@ -1,0 +1,27 @@
+@use './variables' as *; 
+@use './mixin' as *; 
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: $font-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  font-size: $font-size-base;
+  color: $third-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+//global styles
+.spacing-top {
+  margin-top: $spacing-medium;
+}
+
+.text-center {
+  text-align: center;
+}

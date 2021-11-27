@@ -1,0 +1,55 @@
+@use '../../assets/scss/variables' as *;
+@use '../../assets/scss/mixin' as *;
+
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: $spacing-large 0;
+
+  .progress-step {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $third-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    z-index: 2;
+  }
+
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(-100% + $spacing-medium);
+    font-size: $font-size-small;
+    color: $third-color;
+  }
+
+  .progress-step-active {
+    box-shadow: 0 3px 33px 0 rgb(0 255 255 / 40%), 0 2px 24px 0 rgb(0 255 255 / 60%), 0 1px 12px 0 rgb(0 255 255 / 80%);
+    background-color: $primary-color-highlight;
+    color: $primary-color;
+    border: none;
+  }
+
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: $third-color;
+  z-index: 1;
+}

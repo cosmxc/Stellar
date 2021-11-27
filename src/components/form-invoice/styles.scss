@@ -1,0 +1,69 @@
+@use '../../assets/scss/variables' as *; 
+@use '../../assets/scss/buttons' as *; 
+
+form#form-invoice {
+  margin-top: $spacing-medium;
+  label {
+    font-size: $font-size-standard;
+    position: relative;
+  }
+
+  input[type="checkbox"] {
+    margin: 0 $spacing-medium $spacing-medium 0;
+    width: $spacing-large; 
+    height: $spacing-large;
+    background-color: $primary-color-highlight;
+  }
+
+  .form-boxes label{
+    top: -6px;
+  }
+
+  label {
+    font-size: $font-size-standard;
+  }
+
+  input:not([type="submit"]){
+    flex: 1;
+    padding: $spacing-vsmall;
+    border: $border-width-large solid $third-color;
+
+    &::placeholder {
+      color: $secondary-color;
+    }
+  }
+
+  .disclaimer-text {
+    font-size: $font-size-standard;
+  }
+  
+  .error-message {
+    position: relative;
+    color: $color-alert;
+    top: -6px;
+  }   
+
+  #bank {
+    width: 100%;
+    flex: 1;
+    padding: $spacing-vsmall;
+    border: $border-width-large solid $third-color;
+    margin: $spacing-medium 0;
+  }
+
+}
+
+input[type="file"] {
+  margin: $spacing-medium 0;
+  align-items: center ;
+  width: 100%;
+  padding: $spacing-vsmall;
+  border: $border-width-large solid $third-color;
+
+}
+
+.btn-array {
+  margin-top: $spacing-large;
+}
+
+

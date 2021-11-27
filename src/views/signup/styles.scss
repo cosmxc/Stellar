@@ -1,0 +1,29 @@
+@use '../../assets/scss/variables' as *; 
+@use '../../assets/scss/mixin' as *; 
+@use '../../assets/scss/progress-bar' as *; 
+
+// page content wrapper
+main {
+  padding-top: $spacing-top;
+  display: flex;
+	justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .form-wrapper {
+    margin: $spacing-medium;
+    padding: $spacing-xlarge $spacing-xlarge;
+    background-color: $primary-color-background;
+    border-radius: $border-radius-large;
+    box-shadow: 0 6px 20px 0 rgb(0 0 0 / 60%);
+    width: clamp(320px, 50%, $breakpoint1);
+  }
+
+}
+
+.form {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
